@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "0a75e266-6b47-4d9f-a60c-dee41eec274f",
+		"name": "Household Wishlists",
+		"description": "# Introduction\nThis collection interact with the household whishlist.\n\n# Overview\nEver request require a G-Token key.\n# Authentication\nThis collection does not require any special Authentication.\n\n# Error Codes\nThe most common reason for a 403 is that the G-Token is not supplied.\n\n# Rate limit\nThis API is not rate limited.\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create Household",
+			"_postman_id": "f9514b56-2fff-420d-a826-0e8677f0fae5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Taylor Household\"\r\n}\r\n//  \"id\": 19, householdid",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "localhost:3100/households"
+			},
+			"response": [
+				{
+					"id": "53225a8c-70a6-4519-851d-bf074e9b8810",
+					"name": "create Household",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "G-TOKEN",
+								"value": "ROM831ESV",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Taylor Household\"\r\n}\r\n//  \"id\": 19, householdid",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "localhost:3100/households"
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"name": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": " {\r\n        \"name\": \"Taylor Household\",\r\n        \"createdAt\": \"2023-05-16T12:33:45.964Z\",\r\n        \"updatedAt\": \"2023-05-16T12:33:45.964Z\",\r\n        \"id\": 19,\r\n        \"links\": [\r\n            {\r\n                \"rel\": \"self\",\r\n                \"href\": \"http://localhost:3100/households/19\"\r\n            }\r\n        ]\r\n }      "
+				}
+			]
+		},
+		{
+			"name": "Get Household Details",
+			"_postman_id": "74010412-2d2c-4803-85de-2a0be33c2222",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3100/households"
+			},
+			"response": []
+		},
+		{
+			"name": "create user1",
+			"_postman_id": "f7f45d13-4b4e-4f04-ab1c-2e0616f7474e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"email\": \"kiran@gmail.com\",\r\n        \"firstName\": \"Kiran\",\r\n        \"lastName\": \"Bawane\",\r\n        \"householdId\": 1\r\n   }\r\n//    \"wishlistId\": 37",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "localhost:3100/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create user2",
+			"_postman_id": "dfd024c8-436c-46f7-9ecd-dcfed9fd61b7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"email\": \"kittu@gmail.com\",\r\n        \"firstName\": \"Kittu\",\r\n        \"lastName\": \"Jain\",\r\n        \"householdId\": 1\r\n   }\r\n    // \"wishlistId\": 38,",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "localhost:3100/users"
+			},
+			"response": []
+		},
+		{
+			"name": "get create user1 details",
+			"_postman_id": "049cf4de-b81b-4175-824d-542ebe527c90",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3100/users"
+			},
+			"response": []
+		},
+		{
+			"name": "add book to user",
+			"_postman_id": "ae1671cd-abf3-4223-8d77-6e87f82f5337",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3100/whishlists/37/books/1"
+			},
+			"response": []
+		},
+		{
+			"name": "add book to user 2",
+			"_postman_id": "62689f67-11dd-44ee-9432-bf4434f01a62",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3100/whishlists/2/books/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Get household books",
+			"_postman_id": "0b49cc19-bbef-46ca-94a5-6c2d6b03d98a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "G-TOKEN",
+						"value": "ROM831ESV",
+						"type": "text"
+					}
+				],
+				"url": "localhost:3100/households/1/wishlistBooks"
+			},
+			"response": []
+		}
+	]
+}
